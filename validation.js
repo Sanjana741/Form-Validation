@@ -29,15 +29,17 @@ function validate(){
     let emailValue = email.value.trim()
     let passwordValue = password.value.trim()
     let cpasswordValue = cpassword.value.trim()
-   
+    let isValid=true
 
     //User name check
 
     if(nameValue===''){
         setError(uname,'user name cannot be empty')
+        isValid=false
     }
     else if(nameValue.length<3){
         setError(uname,'user name should be minimum 3 characters')
+          isValid=false
     }
     else{        
         setSuccesss(uname)
@@ -45,9 +47,11 @@ function validate(){
     //email check
     if(emailValue===''){
         setError(email,'Eamil cannot be empty')
+          isValid=false
     }  
     else if(!emailCheck(emailValue)){
         setError(email,'Enter Valid Email Id')
+          isValid=false
     }
     else{        
         setSuccesss(email)
@@ -58,9 +62,11 @@ function validate(){
 
     if(passwordValue===''){
         setError(password,'password cannot be empty')
+          isValid=false
     }
     else if(passwordValue.length<8){
         setError(password,'user name should be minimum 8 characters')
+          isValid=false
     }
     else{        
         setSuccesss(password)
@@ -71,9 +77,11 @@ function validate(){
 
     if(cpasswordValue===''){
         setError(cpassword,'password cannot be empty')
+          isValid=false
     }
     else if(cpasswordValue !==passwordValue){
         setError(cpassword,'passwords not matched')
+          isValid=false
     }
     else{        
         setSuccesss(cpassword)
@@ -83,12 +91,16 @@ function validate(){
 
      if(!tandc.checked){
          
-        setError(tc,'click on agree terms checkbox')        
+        setError(tc,'click on agree terms checkbox')    
+           isValid=false
     }
     else{
         setSuccesss(tc)
     }
-    
+    if (isValid) {
+        // Redirect to the thank you page
+        window.location.href = "index.html";
+    }
    
     function setError(input,message){
         let parent = input.parentElement;
