@@ -65,7 +65,7 @@ function validate(){
           isValid=false
     }
     else if(passwordValue.length<8){
-        setError(password,'user name should be minimum 8 characters')
+        setError(password,'password should be minimum 8 characters')
           isValid=false
     }
     else{        
@@ -76,11 +76,14 @@ function validate(){
     //Confirm Password check
 
     if(cpasswordValue===''){
-        setError(cpassword,'password cannot be empty')
+        setError(cpassword,'confirm password cannot be empty')
           isValid=false
     }
     else if(cpasswordValue !==passwordValue){
-        setError(cpassword,'passwords not matched')
+        setError(cpassword,'both passwords not matched')
+          isValid=false
+    }else if(cpasswordValue.length<8){
+        setError(cpassword,'confirm password should be minimum 8 characters')
           isValid=false
     }
     else{        
