@@ -4,15 +4,10 @@ This project demonstrates a simple form validation using HTML, CSS, and JavaScri
 
 ## Table of Contents
 
-- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-
-## Demo
-
-You can view the live demo of the form validation [here](https://github.com/Sanjana741/Form-Validation).
 
 ## Features
 
