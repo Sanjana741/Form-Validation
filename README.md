@@ -1,5 +1,3 @@
-Sure, here's a sample README file for your form validation project:
-
 # Form Validation
 
 This project demonstrates a simple form validation using HTML, CSS, and JavaScript. The form collects user information including username, email, password, and confirms the password while also ensuring the user agrees to the terms and conditions.
